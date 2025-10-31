@@ -23,6 +23,10 @@ a:hover {
   font-family: "Roboto Slab", serif;
 }
 
+.navbar-text {
+  color:#A70C0C !important;
+}
+
 /* Styling for the header image */
 .header {
     position: relative;
