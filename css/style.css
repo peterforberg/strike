@@ -6,6 +6,11 @@ sass --watch scss/style.scss css/style.css
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 /* Navbar styling */
+
+nav {
+  background-color: antiquewhite !important;
+}
+
 a {
   text-decoration: none;
   color:black !important;
@@ -31,7 +36,6 @@ a:hover {
 .header {
     position: relative;
     text-align: center;
-    color: white;
     width: 100%;
 }
 
@@ -54,25 +58,42 @@ a:hover {
 }
 
 /* General styling */
+body {
+  background-color: antiquewhite;
+}
+
 body p {
   font-family: "Times New Roman", serif;
-  font-size: 1.3em;
+  font-size: 1.1em;
 }
 
 .writing a {
   font-family: "Times New Roman", serif;
-  color:#A70C0C !important;
+  text-decoration: underline;
+  text-decoration-color: #A70C0C;
+  text-decoration-thickness: 2px;
 }
 
+body b {
+  color:#A70C0C;
+}
 
 body li {
   font-family: "Times New Roman", serif;
-  font-size: 1.3em;
+  font-size: 1.1em;
 }
 
 body h1 {
   font-family: "Roboto Slab", serif;
   font-size: 1.3em;
+  color: white;
+  text-align: center;
+  padding-bottom: 3%;
+}
+
+body h1 span {
+    background-color: #A70C0C;
+    padding: 2%;
 }
 
 body .container {
