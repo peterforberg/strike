@@ -1,0 +1,78 @@
+/* 
+Command to activate the under-used SASS file:
+sass --watch scss/style.scss css/style.css 
+*/
+/* Navbar styling */
+a {
+  text-decoration: none;
+  color:black !important;
+}
+
+.navbar {
+  font-family: "Roboto Slab", serif;
+}
+
+a:hover {
+  color: #A70C0C !important;
+}
+
+.nav-link {
+  font-family: "Roboto Slab", serif;
+}
+
+/* Styling for the header image */
+.header {
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+#headerText {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:#A70C0C;
+    font-size: 3rem;
+    line-height: .01 !important;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Roboto Slab", serif;
+  color: black;
+  font-size: 6rem;
+  -webkit-text-stroke: 1px white;
+}
+
+/* General styling */
+body p {
+  font-family: "Times New Roman", serif;
+  font-size: 1.3em;
+}
+
+.writing a {
+  font-family: "Times New Roman", serif;
+  color:#A70C0C !important;
+}
+
+
+body li {
+  font-family: "Times New Roman", serif;
+  font-size: 1.3em;
+}
+
+body h1 {
+  font-family: "Roboto Slab", serif;
+  font-size: 1.3em;
+}
+
+body .container {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+option {
+  font-size: 1.5rem;
+}
