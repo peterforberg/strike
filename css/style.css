@@ -93,12 +93,12 @@ body h1 {
 
 body h1 span {
     background-color: #A70C0C;
-    padding: 2%;
+    padding: 1%;
 }
 
 body .container {
-  padding-left: 15%;
-  padding-right: 15%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 option {
