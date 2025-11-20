@@ -50,10 +50,8 @@
   </nav>
     <div class="header"><img src="images/header.png" alt="Ther Berkeley Campanile upside down" style="width:100%;"><div class="centered"><i id="headerText">4811 ON STRIKE</i></div></div>
     <div class="container justify-content-center writing">
-      <!--<h1><span>Test</span></h1>-->
-      <p>Time until contract expiration:</p>
-      <p><div id="countdown"></div></p>
-      <p>The UAW 4811 contract expires <b>December 31st.</b> So far, the university has not budged on critical issues, such as protections for international students and non-residents. As academic student employees, our power to win such demands comes from our labor. By threatening to withhold our labor, we can put pressure on the university to come to an agreement. This cannot be an idle threat: If contract negotiations fail, we must be prepared to <b>strike.</b> In other words, there is no <b>strike threat</b> without <b>strike prep.</b></p>
+      <a href="getinvolved.html"><h1><span>Click here to get involved!</span></h1></a>
+      <p>The UAW 4811 contract expires <b>December 31st</b>. So far, the university has not budged on critical issues, such as protections for international students and non-residents. As academic student employees, our power to win such demands comes from our labor. By threatening to withhold our labor, we can put pressure on the university to come to an agreement. This cannot be an idle threat: If contract negotiations fail, we must be prepared to <b>strike.</b> In other words, there is no <b>strike threat</b> without <b>strike prep.</b></p>
       <p>If we want to win a contract that will protect our community, increase our wages and benefits, and divest from weapons manufacturing, then we need to start preparing for a strike <i>now.</i></p>
       <p>In order to prepare, we have compiled resources on this website. Please check out the pages below to learn more about bargaining, striking, and organizing.</p>
       <ul>
@@ -62,7 +60,7 @@
         <li><a href="getinvolved.html">How can we prepare for a 2026 strike? And how can I get involved?</a></li>
         <li><a href="faq.html">I have so many other questions! What else should I know?</a></li>
       </ul>
-     
+      <div id="countdown"></div>
       </div>
       <div class="footer">
         <img src="images/protestpoint.png" alt="a network red nodes" style="width:100%;"><div class="centered"></div>
@@ -91,7 +89,7 @@
     const seconds = Math.floor((diff / 1000) % 60);
 
     document.getElementById("countdown").textContent =
-      `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      `${days} days ${hours} hours ${minutes} minutes and ${seconds} seconds until the contract expires.`;
   }
 
   updateCountdown();
