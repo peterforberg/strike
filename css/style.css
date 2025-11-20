@@ -58,6 +58,18 @@ a:hover {
 }
 
 /* General styling */
+
+#countdown {
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  font-family: Impact, "Anton", sans-serif;
+  color:#A70C0C;
+  font-size: 5vw;
+  -webkit-text-stroke: 1px white;
+}
+
 body {
   background-color: antiquewhite;
 }

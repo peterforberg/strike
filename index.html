@@ -12,13 +12,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
     <!-- Link custom CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- JavaScript and D3 -->
-    <script src="https://d3js.org/d3.v6.min.js" charset="utf-8"></script>
-    <script src="js/example.js"></script>
     <link rel="icon" href="/images/favicon.png" type="image/x-icon"> 
     <title>UAW 4811 on strike!</title>
+
+
   </head>
-  <body onload="generatesvg();">
+  <body>
     <nav class="navbar navbar-expand-lg navbar-dark" style="background: white;">
       <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -55,9 +54,11 @@
     <div class="header"><img src="images/header.png" alt="Ther Berkeley Campanile upside down" style="width:100%;"><div class="centered"><i id="headerText">4811 ON STRIKE</i></div></div>
     <div class="container justify-content-center writing">
       <!--<h1><span>Test</span></h1>-->
-      <p>The UAW 4811 contract expires <b>December 31st.</b> So far, the university has not budged on critical issues, such as protections for international students and non-residents. If we want to win a contract that will protect our community, increase our wages and benefits, and divest from weapons manufacturing, then we must be prepared to <b>strike.</b></p>
-      <p>By threatening to withhold our labor, we can put pressure on the university and signal the importance of our demands. And, if contract negotiations fail, we must be able to backup our strike threat. We believe that there is no <b>strike threat</b> without <b>strike prep.</b></p>
-      <p>In order to prepare for a possible strike, we have compiled resources on this website. Please checkout the pages below to learn more about bargaining, striking, and organizing.</p>
+      <p>Time until contract expiration:</p>
+      <p><div id="countdown"></div></p>
+      <p>The UAW 4811 contract expires <b>December 31st.</b> So far, the university has not budged on critical issues, such as protections for international students and non-residents. As academic student employees, our power to win such demands comes from our labor. By threatening to withhold our labor, we can put pressure on the university to come to an agreement. This cannot be an idle threat: If contract negotiations fail, we must be prepared to <b>strike.</b> In other words, there is no <b>strike threat</b> without <b>strike prep.</b></p>
+      <p>If we want to win a contract that will protect our community, increase our wages and benefits, and divest from weapons manufacturing, then we need to start preparing for a strike <i>now.</i></p>
+      <p>In order to prepare, we have compiled resources on this website. Please checkout the pages below to learn more about bargaining, striking, and organizing.</p>
       <ul>
         <li><a href="bargaining.html">What's the latest with bargaining?</a></li>
         <li><a href="reflections.html">What lessons did we learn from the 2022 strike?</a></li>
@@ -74,5 +75,31 @@
     <!-- Bootstrap Functions -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha3/js/bootstrap.min.js"></script>
+    <script>
+  // Set your target event time in UTC
+  const targetUTC = "2026-01-01T07:59:59Z"; // example
+  const target = new Date(targetUTC);
+
+  function updateCountdown() {
+    const now = new Date();
+    const diff = target - now;
+
+    if (diff <= 0) {
+      document.getElementById("countdown").textContent = "Event has started!";
+      return;
+    }
+
+    const days = Math.floor(diff / (1000*60*60*24));
+    const hours = Math.floor((diff / (1000*60*60)) % 24);
+    const minutes = Math.floor((diff / 1000/60) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    document.getElementById("countdown").textContent =
+      `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
   </body>
 </html>
