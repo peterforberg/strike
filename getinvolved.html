@@ -1,74 +1,121 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <!-- Import fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-    <!-- Link custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- JavaScript and D3 -->
-    <script src="https://d3js.org/d3.v6.min.js" charset="utf-8"></script>
-    <script src="js/example.js"></script>
-    <link rel="icon" href="/images/favicon.png" type="image/x-icon"> 
-    <title>UAW 4811 on strike!</title>
-  </head>
-  <body onload="generatesvg();">
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background: white;">
-      <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-              aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #A70C0C;">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarText">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                      <a class="nav-link" href="index.html">strike!</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="reflections.html">2022 reflections</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="getinvolved.html">get involved</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="bargaining.html">bargaining</a>
-                </li>
-                                    <li class="nav-item">
-                    <a class="nav-link" href="faq.html">FAQ</a>
-                  </li>
-              </ul>
-              <span class="navbar-text">
-                  a guide to academic strikes
-              </span>
-          </div>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZV93RLNSWY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZV93RLNSWY');
+  </script>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <!-- Import fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+  <!-- Link custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- JavaScript and D3 -->
+  <script src="https://d3js.org/d3.v6.min.js" charset="utf-8"></script>
+  <script src="js/example.js"></script>
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <title>UAW 4811 on strike!</title>
+</head>
+
+<body onload="generatesvg();">
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background: white;">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"
+        style="background-color: #A70C0C;">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">strike!</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="reflections.html">2022 reflections</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="getinvolved.html">get involved</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="bargaining.html">bargaining</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="faq.html">FAQ</a>
+          </li>
+          <!--<li class="nav-item">
+            <a class="nav-link" href="contact.html">contact</a>
+          </li>-->
+        </ul>
+        <span class="navbar-text">
+          a guide to academic strikes
+        </span>
       </div>
+    </div>
   </nav>
-    <div class="header"><img src="images/header.png" alt="Ther Berkeley Campanile upside down" style="width:100%;"><div class="centered"><i id="headerText">GET INVOLVED</i></div></div>
-    <div class="container justify-content-center writing">
-      <p>In order for the university to recognize our <b>strike threat</b>, we need people to start participating in labor organizing. The strategies for labor organizing laid out below are just a few ways that you can get involved. If you are interested in helping us build labor power among our coworkers, please fill out <a href="https://forms.gle/6hKwh4vYGQQ7iCw26" target="_blank">this brief form.</a></p>
-      <h1><span>Powermapping</span></h1>
-      <p>Powermapping is a strategy for tracking strike readiness in your department. Powermapping serves a double-purpose: First, it requires that you become familiar with your coworkers, as you will need to ask them questions in order to complete the powermap. This can help to build labor solidarity, as you are necessarily discussing labor withholding, bargaining priorities, and working conditions. Second, it becomes a useful tool when actions arise, such as a strike. You can use a powermap to quickly identify which coworkers might need help preparing for a strike authorization vote or withholding their labor. You can use <a href="https://docs.google.com/spreadsheets/d/1QVB6XbiEaMClOPoPVD-EXA-V97KaxV4tZW9au61jDHo/copy" target="_blank">this link</a> to create a copy of a powermap template for your department.</p>
-      <h1><span>Department organizing</span></h1>
-      <p>Many departments on campus are not organized. Union meetings may be infrequent, membership may be low, and information about bargaining or contract deadlines may be scarce. Department organizing is a great way to connect with your coworkers and setup a regular space for discussing working conditions. When it comes to bargaining, department organizing can be a great way to learn about the priorities your coworkers have: What do they want in the next contract? What are they most worried about? Department organizing can take on many forms: A groupchat, a regular meeting, or ad-hoc town halls when issues arise. We can provide support in any of these areas to help your dpeartment udnerstand the bargaining process and prepare for a labor action.</p>
-      <h1><span>Walkthroughs</span></h1>
-      <p>Walkthroughs are a standard way of connecting with your coworkers and sharing information about the latest bargaining updates. By going door-to-door, this can be a good way to connect with people in neighboring departments or labs, as well as with your own departmental coworkers. Walkthroughs should both provide people with information and learn what's on their mind: Are they worried about bargaining? What demands matter most to them? How much have they been paying attention to what's going on? Walkthroughs can take many forms, and we are interested in having walkthroughs to assess how prepared people are to withhold their labor.</p>
-      <h1><span>Help with this site</span></h1>
-      <p>We would appreciate any assistance in helping build a strike threat and strike power during this round of contract negotiations. If you want to help with any aspects of this project, please let us know. This may include flyering, doing walkthroughs, writing content for the site, attending bargaining sessions, and helping others organize their coworkers.</p>
-      <h1><span>Fill out the form!</span></h1>
-      <p>If any of this interested you, please fill out <a href="https://forms.gle/6hKwh4vYGQQ7iCw26" target="_blank">this brief form</a> to help us make this work possible.</p>
-      </div>
-      <div class="footer">
-        <img src="images/protestpoint.png" alt="a network red nodes" style="width:100%;"><div class="centered"></div>
-      </div>
-      </div>
-    <!-- Bootstrap Functions -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha3/js/bootstrap.min.js"></script>
-  </body>
+  <div class="header"><img src="images/header.png" alt="Ther Berkeley Campanile upside down" style="width:100%;">
+    <div class="centered"><i id="headerText">GET INVOLVED</i></div>
+  </div>
+  <div class="container justify-content-center writing">
+    <p>In order for the university to recognize our <b>strike threat</b>, we need people to start participating in labor
+      organizing. The strategies for labor organizing laid out below are just a few ways that you can get involved. If
+      you are interested in helping us build labor power among our coworkers, please fill out <a
+        href="https://forms.gle/6hKwh4vYGQQ7iCw26" target="_blank">this brief form.</a></p>
+    <h1><span>Powermapping</span></h1>
+    <p>Powermapping is a strategy for tracking strike readiness in your department. Powermapping serves a
+      double-purpose: First, it requires that you become familiar with your coworkers, as you will need to ask them
+      questions in order to complete the powermap. This can help to build labor solidarity, as you are necessarily
+      discussing labor withholding, bargaining priorities, and working conditions. Second, it becomes a useful tool when
+      actions arise, such as a strike. You can use a powermap to quickly identify which coworkers might need help
+      preparing for a strike authorization vote or withholding their labor. You can use <a
+        href="https://docs.google.com/spreadsheets/d/1QVB6XbiEaMClOPoPVD-EXA-V97KaxV4tZW9au61jDHo/copy"
+        target="_blank">this link</a> to create a copy of a powermap template for your department.</p>
+    <h1><span>Department organizing</span></h1>
+    <p>Many departments on campus are not organized. Union meetings may be infrequent, membership may be low, and
+      information about bargaining or contract deadlines may be scarce. Department organizing is a great way to connect
+      with your coworkers and setup a regular space for discussing working conditions. When it comes to bargaining,
+      department organizing can be a great way to learn about the priorities your coworkers have: What do they want in
+      the next contract? What are they most worried about? Department organizing can take on many forms: A groupchat, a
+      regular meeting, or ad-hoc town halls when issues arise. We can provide support in any of these areas to help your
+      dpeartment udnerstand the bargaining process and prepare for a labor action.</p>
+    <h1><span>Walkthroughs</span></h1>
+    <p>Walkthroughs are a standard way of connecting with your coworkers and sharing information about the latest
+      bargaining updates. By going door-to-door, this can be a good way to connect with people in neighboring
+      departments or labs, as well as with your own departmental coworkers. Walkthroughs should both provide people with
+      information and learn what's on their mind: Are they worried about bargaining? What demands matter most to them?
+      How much have they been paying attention to what's going on? Walkthroughs can take many forms, and we are
+      interested in having walkthroughs to assess how prepared people are to withhold their labor.</p>
+    <h1><span>Help with this site</span></h1>
+    <p>We would appreciate any assistance in helping build a strike threat and strike power during this round of
+      contract negotiations. If you want to help with any aspects of this project, please let us know. This may include
+      flyering, doing walkthroughs, writing content for the site, attending bargaining sessions, and helping others
+      organize their coworkers.</p>
+    <h1><span>Fill out the form!</span></h1>
+    <p>If any of this interested you, please fill out <a href="https://forms.gle/6hKwh4vYGQQ7iCw26" target="_blank">this
+        brief form</a> to help us make this work possible.</p>
+  </div>
+  <div class="footer">
+    <img src="images/protestpoint.png" alt="a network red nodes" style="width:100%;">
+    <div class="centered"></div>
+  </div>
+  </div>
+  <!-- Bootstrap Functions -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha3/js/bootstrap.min.js"></script>
+</body>
+
 </html>

@@ -1,98 +1,134 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <!-- Import fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-    <!-- Link custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- JavaScript and D3 -->
-    <script src="https://d3js.org/d3.v6.min.js" charset="utf-8"></script>
-    <script src="js/example.js"></script>
-    <link rel="icon" href="/images/favicon.png" type="image/x-icon"> 
-    <title>UAW 4811 on strike!</title>
-  </head>
-  <body onload="generatesvg();">
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background: white;">
-      <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-              aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #A70C0C;">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarText">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                      <a class="nav-link" href="index.html">strike!</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="reflections.html">2022 reflections</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="getinvolved.html">get involved</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="bargaining.html">bargaining</a>
-                </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="faq.html">FAQ</a>
-                  </li>
-              </ul>
-              <span class="navbar-text">
-                  a guide to academic strikes
-              </span>
-          </div>
-      </div>
-  </nav>
-    <div class="header"><img src="images/header.png" alt="Ther Berkeley Campanile upside down" style="width:100%;"><div class="centered"><i id="headerText">FAQ</i></div></div>
-    <div class="container justify-content-center writing">
-      <!--<h1><span>Test</span></h1>-->
-      <h1><span>Will we go on strike?</span></h1>
-      <p>Union leadership has not announced plans to hold a strike authorization vote (SAV). So, there are a few possibilities: </p>
-        <ul>
-          <li>We agree to a contract by 12/31</li>
-          <li>We work without a contract after 12/31</li>
-          <li>Leadership extends the contract past 12/31</li>
-          <li>Leadership announces an SAV after 12/31</li>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZV93RLNSWY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZV93RLNSWY');
+  </script>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <!-- Import fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+  <!-- Link custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- JavaScript and D3 -->
+  <script src="https://d3js.org/d3.v6.min.js" charset="utf-8"></script>
+  <script src="js/example.js"></script>
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <title>UAW 4811 on strike!</title>
+</head>
+
+<body onload="generatesvg();">
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background: white;">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"
+        style="background-color: #A70C0C;">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">strike!</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="reflections.html">2022 reflections</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="getinvolved.html">get involved</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="bargaining.html">bargaining</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="faq.html">FAQ</a>
+          </li>
+          <!--<li class="nav-item">
+            <a class="nav-link" href="contact.html">contact</a>
+          </li>-->
         </ul>
-        <p>It's impossible to predict what will happen, but even if we <i>don't go on strike</i>, it's essential that we prepare for a strike. If the university doesn't believe that we can successfully withhold our labor and fight for our demands, then they have no reason to compromise with our bargaining team.</p>
-        <h1><span>Why is bargaining not working?</span></h1>
-        <p>As union leadership has repeatedly told us, the administration is fearful of a crackdown by Trump and is reluctant to give into any economic demands. While it is true that Trump has leveraged his presidency to tighten research budgets, unlawfully disappear students, and restrict free speech, we have no reason to believe that acquiescing to Trump's demands will actually protect us from his furor. Still, the administration seems to hope that by parroting his langauge and grievances, they will avoid punishment. So, instead of negotiating, they can continue to stall and hope that we will submit to their proposals. Without coordinated labor action, the university has no reason to side with us over Trump.</p>
-        <h1><span>If we go on strike, will we still get paid?</span></h1>
-        <p>Yes. UAW members are asked to pay dues, the bulk of which go to a strike defense fund, which can be used to pay striking workers. If we go on strike, members will receive $500 a week for the duration of the strike.</p>
-        <h1><span>What are we demanding from the university?</span></h1>
-        <p>Last year, the union conducted a bargaining survey and hosted a bargaining convention to determine our priorities for our contract negotiations. You can read about these initial demands on the union's <a href="https://www.uaw4811.org/initial-bargaining-demands-1">bargaining website.</a> In short, the list of demands includes:
-          <ul>
-            <li>Pay equity across campuses</li>
-            <li>Increased minimum wage</li>
-            <li>Inflation-adjusted wages</li>
-            <li>Stable funding</li>
-            <li>Protections for international and immigrant workers</li>
-            <li>Protections against abuse, harassment, and discrimination</li>
-            <li>Improved childcare and parental leave</li>
-            <li>Improved access to affordable housing</li>
-            <li>Financial transparency</li>
-            <li>Retirement divestment from weapons manufacturing</li>
-            <li>Continued access to contraceptive and gender-affirming care</li>
-            <li>Increased protections for free speech on campus</li>
-            <li>Improved work-life balance (e.g., class size limits, paid leave)</li>
-            <li>Improved grievance resolutions and strike protections</li>
-          </ul>
-        </p>
-        <h1><span>My question isn't answered here, where can I ask it?</span></h1>
-        <p>Please fill out <a href="https://forms.gle/XiFbXrppdWcPgpTd7" target="_blank">this form,</a> and we will try to get back to you.</p>
+        <span class="navbar-text">
+          a guide to academic strikes
+        </span>
       </div>
-      <div class="footer">
-        <img src="images/protestpoint.png" alt="a network red nodes" style="width:100%;"><div class="centered"></div>
-      </div>
-      </div>
-    <!-- Bootstrap Functions -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha3/js/bootstrap.min.js"></script>
-  </body>
+    </div>
+  </nav>
+  <div class="header"><img src="images/header.png" alt="Ther Berkeley Campanile upside down" style="width:100%;">
+    <div class="centered"><i id="headerText">FAQ</i></div>
+  </div>
+  <div class="container justify-content-center writing">
+    <!--<h1><span>Test</span></h1>-->
+    <h1><span>Will we go on strike?</span></h1>
+    <p>Union leadership has not announced plans to hold a strike authorization vote (SAV). So, there are a few
+      possibilities: </p>
+    <ul>
+      <li>We agree to a contract by 12/31</li>
+      <li>We work without a contract after 12/31</li>
+      <li>Leadership extends the contract past 12/31</li>
+      <li>Leadership announces an SAV after 12/31</li>
+    </ul>
+    <p>It's impossible to predict what will happen, but even if we <i>don't go on strike</i>, it's essential that we
+      prepare for a strike. If the university doesn't believe that we can successfully withhold our labor and fight for
+      our demands, then they have no reason to compromise with our bargaining team.</p>
+    <h1><span>Why is bargaining not working?</span></h1>
+    <p>As union leadership has repeatedly told us, the administration is fearful of a crackdown by Trump and is
+      reluctant to give into any economic demands. While it is true that Trump has leveraged his presidency to tighten
+      research budgets, unlawfully disappear students, and restrict free speech, we have no reason to believe that
+      acquiescing to Trump's demands will actually protect us from his furor. Still, the administration seems to hope
+      that by parroting his langauge and grievances, they will avoid punishment. So, instead of negotiating, they can
+      continue to stall and hope that we will submit to their proposals. Without coordinated labor action, the
+      university has no reason to side with us over Trump.</p>
+    <h1><span>If we go on strike, will we still get paid?</span></h1>
+    <p>Yes. UAW members are asked to pay dues, the bulk of which go to a strike defense fund, which can be used to pay
+      striking workers. If we go on strike, members will receive $500 a week for the duration of the strike.</p>
+    <h1><span>What are we demanding from the university?</span></h1>
+    <p>Last year, the union conducted a bargaining survey and hosted a bargaining convention to determine our priorities
+      for our contract negotiations. You can read about these initial demands on the union's <a
+        href="https://www.uaw4811.org/initial-bargaining-demands-1">bargaining website.</a> In short, the list of
+      demands includes:
+    <ul>
+      <li>Pay equity across campuses</li>
+      <li>Increased minimum wage</li>
+      <li>Inflation-adjusted wages</li>
+      <li>Stable funding</li>
+      <li>Protections for international and immigrant workers</li>
+      <li>Protections against abuse, harassment, and discrimination</li>
+      <li>Improved childcare and parental leave</li>
+      <li>Improved access to affordable housing</li>
+      <li>Financial transparency</li>
+      <li>Retirement divestment from weapons manufacturing</li>
+      <li>Continued access to contraceptive and gender-affirming care</li>
+      <li>Increased protections for free speech on campus</li>
+      <li>Improved work-life balance (e.g., class size limits, paid leave)</li>
+      <li>Improved grievance resolutions and strike protections</li>
+    </ul>
+    </p>
+    <h1><span>My question isn't answered here, where can I ask it?</span></h1>
+    <p>Please fill out <a href="https://forms.gle/XiFbXrppdWcPgpTd7" target="_blank">this form,</a> and we will try to
+      get back to you.</p>
+  </div>
+  <div class="footer">
+    <img src="images/protestpoint.png" alt="a network red nodes" style="width:100%;">
+    <div class="centered"></div>
+  </div>
+  </div>
+  <!-- Bootstrap Functions -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha3/js/bootstrap.min.js"></script>
+</body>
+
 </html>
